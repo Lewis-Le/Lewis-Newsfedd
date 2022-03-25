@@ -1,0 +1,361 @@
+/* .postbar-wrap {
+  box-shadow: 1px 1px 18px 8px #2e2c2c;
+  border-radius: 18px;
+  background-color: #393E46;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  align-items: center;
+  position: fixed;
+  margin-top: 19vh;
+  margin-left: 12vh;
+  z-index: 5;
+  opacity: 0.98;
+  transition-duration: 0.5s;
+  animation-name: postbar-appear;
+  animation-duration: 0.8s;
+
+} */
+
+.input-text {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: auto;
+  background: #393E46;
+  border-radius: 20px;
+  font-family: Ubuntu-Bold;
+  font-size: 17px;
+  text-align: center;
+  color: #8f8fa1;
+  line-height: 1.2;
+  box-shadow: 1px 1px 11px 1px #504f4f;
+
+  transition-duration: 0.1s;
+  animation-name: postbar-elements;
+  animation-duration: 1s;
+}
+textarea{
+  outline: none;
+  border: none;
+}
+
+
+.postbar-btn{   /*  nút POST/UPDATE */
+  border-radius: 50px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.425);
+  border-width: 1px;
+  text-align: center;
+  margin-left: 1%;
+  margin-top: 28px;
+  height: 50px;
+  width: 150px;
+  font-size: 10px;
+  color: gray;
+  transition-duration: 0.4s;
+}
+.postbar-btn:hover{
+  width: 320px;
+  background-color: #ffffff;
+  color: black;
+  transition-duration: 0.4s;
+}
+
+
+/* .btn-group-postbar{
+  box-shadow: 1px 1px 15px 1px #9b9898;
+  border-radius: 35px;
+  box-sizing: 2px;
+  line-height: 2;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+
+  transition-duration: 0.3s;
+  animation-name: postbar-elements;
+  animation-duration: 1s;
+} */
+
+
+@keyframes postbar-appear {
+  0% {
+    background-color: #A6D0E4;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+    width: 60%;
+    transform: scale(0);
+  }
+  38% {
+    /* opacity: 1;
+    width: 55%;
+    height: 16%; */
+    box-shadow: 0 2px 500px 21px rgba(177, 175, 175, 0.514);
+  }
+  65% {
+    /* height: 52%; */
+    /* box-shadow: 0 200px 200px 200px rgba(0, 0, 0, 0.904); */
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    /* width: 50%;
+    height: 50%; */
+    transform: scale(1);
+  }
+}
+
+@keyframes postbar-elements {
+  0% {
+    width: 0%;
+  }
+  38% {
+    width: 80%;
+  }
+  90% {
+    width: 70%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+
+.show-postbar-btn {   /*nút add new post hình dấu + */
+  position: fixed;
+  text-decoration : none;
+  align-items: center;
+  margin-top: 84vh;
+  margin-left: 2vh;
+  padding: 10px 40px;
+  background-color: #8dabb49c;
+  backdrop-filter: blur(120px);
+  color: rgb(124, 95, 76);
+  border-radius : 40px;
+  font-family: "Century Gothic";
+  font-weight: bolder;
+  border-style: none;
+  /* box-shadow: 0px 0px 5px 2px rgb(167, 164, 164); */
+  transition-duration: 0.4s;
+}
+.show-postbar-btn:hover {
+  background-color: #a6d0e4c7;
+  color: black;
+  box-shadow: 0px 1px 80px 14px rgb(167, 164, 164);
+  transition-duration: 0.4s;
+}
+
+
+
+
+.postbar-container{
+  position: fixed;
+  pointer-events : none;
+  top: 18%; left: 20%;
+  width: 60%; height: fit-content;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  z-index: 1;
+  background-color: rgba(80, 80, 80, 0.555);
+  backdrop-filter: blur(15px);
+  box-shadow: 1px 2px 20px 12px rgba(0, 0, 0, 0.644);
+  border-radius: 12px;
+  display: flex;
+  justify-content : center;
+  align-items : center;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s;
+
+  transform: translate(0%, 10%);
+}
+
+.close{
+  position: absolute;
+  top: 18px; 
+  right: 25px;
+  font-size : 28px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.postbar-body{
+  width: 95%;
+  max-width: 100%;
+  transform: scale(1);
+  /* box-shadow: 0 20px 20px rgba(0,0,0,0.2); */
+  outline: none;
+  transition: all 0.3s;
+}
+
+.show-postbar{
+  pointer-events : all;
+  opacity: 1;
+  transform: scale(1);
+  /* transition-duration: 0.5s; */
+  animation-name: postbar-appear;
+  animation-duration: 0.6s;
+}
+
+
+
+
+
+.postbar-select{
+  background: none;
+  color: gray;
+  margin-left: 15px;
+  margin-bottom: 4px;
+  border-radius: 9px;
+}
+.postbar-option{
+  border-radius: 9px;
+}
+
+
+hr{
+  width: 100%;
+  background-color: white;
+}
+
+
+.display-inline-flex{
+  display: inline-flex;
+}
+
+
+
+.postbar-tag-btn{
+  border: none;
+  color: white;
+  background: none;
+  margin-left: 19px;
+  margin-top: 2%;
+  transition-duration: 0.2s;
+}
+.postbar-tag-btn:hover{
+  font-size: medium;
+  color: wheat;
+  transition-duration: 0.2s;
+}
+
+
+
+.postbar-tag-1{
+  position: absolute;
+  pointer-events : none;
+  z-index: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 1;
+  transform: scale(0);
+  transition-duration: 0.2s;
+}
+.postbar-tag-2{
+  position: absolute;
+  pointer-events : none;
+  z-index: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 1;
+  transform: scale(0);
+  transition-duration: 0.2s;
+}
+.postbar-tag-3{
+  position: absolute;
+  pointer-events : none;
+  z-index: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 1;
+  transform: scale(0);
+  transition-duration: 0.2s;
+}
+.postbar-tag-4{
+  position: absolute;
+  pointer-events : none;
+  z-index: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 1;
+  transform: scale(0);
+  transition-duration: 0.2s;
+}
+
+.postbar-show-tag{
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  pointer-events : visibleFill;
+  z-index: 10;
+  opacity: 1;
+  transform: scale(1);
+  transition-duration: 0.4s;
+}
+
+
+
+
+
+
+/* Code plus-in */
+.middle {
+	width: 50%;
+	max-width: 500px;
+}
+.slider-container {
+	position: relative;
+}
+.slider-container .bar {
+	position: absolute;
+	z-index: 1;
+	left: 15px;
+	right: 15px;
+	top: 7px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #5c5c5c;
+	overflow: hidden;
+}
+.slider-container .bar .fill {
+	display: block;
+	width: 50%;
+	height: 100%;
+	background-color: #0f9d58;
+}
+.slider-container .slider {
+	position: relative;
+	z-index: 2;
+	-webkit-appearance: none;
+	margin: 0;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	outline: none;
+	background-color: transparent;
+}
+.slider-container .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	background-color: #0f9d58;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	transform: rotate(-45deg) translate(0%, 0%);
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	transition: 0.3s ease-in-out;
+}
+.slider-container .slider:active::-webkit-slider-thumb,
+.slider-container .slider::-webkit-slider-thumb:hover {
+	border-bottom-left-radius: 0;
+	transform: rotate(-45deg) translate(75%, -75%);
+}
+.slider-container .slider:active::-webkit-slider-thumb {
+	box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,115 @@
+.messageBox {
+  background: #F3F3F3;
+  /* border-radius: 35px; */
+  border-bottom-right-radius: 35px;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 35px;
+  padding-left: 10px;
+  padding-right: 12px;
+  margin-top: 22px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+  height: fit-content;
+  box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.651);
+
+  /* animation-name: message-appear;
+  animation-duration: 0.8s;
+  transition-duration: 0.6s; */
+
+  transform-origin: left;
+  transition: 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.messageText {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  letter-spacing: 0;
+  float: left;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.messageText img {
+  vertical-align: middle;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 1px;
+  padding-right: 15px;
+  margin-top: -17px;
+}
+
+.sentText {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  font-size: 6px;
+  color: #828282;
+  background-color: blanchedalmond;
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+  letter-spacing: 0.3px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.colorWhite {
+  color: white;
+}
+
+.colorDark {
+  color: #353535;
+}
+
+.backgroundBlue {
+  background: #2979FF;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  margin-top: 32px;
+  margin-right: -5px;
+}
+
+.backgroundLight {
+  background: #F3F3F3;
+}
+
+
+@keyframes message-appear {
+  0%{
+    zoom: 0%;
+    /* opacity: 0%; */
+  }
+  40%{
+    zoom: 20%;
+    /* opacity: 40%; */
+  }
+  80%{
+    zoom: 40%;
+    /* opacity: 100%; */
+  }
+  100%{
+    zoom: 100%;
+    /* opacity: 99%; */
+  }
+}

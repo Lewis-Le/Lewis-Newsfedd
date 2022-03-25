@@ -1,0 +1,63 @@
+@keyframes card-remove{
+  0%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+.removed-card{
+  // animation-duration: 0.7s;
+  // animation-name: card-remove;
+  
+  transform: scale(0);
+  transition: all 1s ease-out;
+}
+
+.wrap-allcard-with-animation-when-change{   //(chưa hoạt động)
+  align-items: center;
+  display: block;
+  transition: all 1s;
+}
+
+.show-postbar-btn-profile-page{     //cái nút hiện postbar
+  margin-left: 178vh;
+}
+
+.profile-page-main-menubar{
+  position: absolute;
+  display: inline-flex;
+  margin-top: -360px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 95vh;
+  font-size: medium;
+  //background-color: black;
+  color: white;
+  
+
+  .profile-page-main-menubar-li{
+    margin-right: 20px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+  }
+  .profile-page-main-menubar-li:hover{
+    color: ivory;
+    font-size: larger;
+    margin-left: 10px;
+    transition-duration: 0.2s;
+  }
+
+}
+
+
+.profile-menubar-underline{
+  position: absolute;
+  margin-top: -290px;
+  width: 80vh;
+  margin-left: 90vh;
+}

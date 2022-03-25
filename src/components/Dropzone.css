@@ -1,0 +1,191 @@
+.dropzone-container{
+    width: 100%;
+    height: 100%;
+}
+
+.file-input {
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+}
+.file-input:hover {
+    background: #ccc;
+}
+
+
+
+
+.uploaded-img {     /* là mấy tấm hình trong wrap img-review */
+    pointer-events: visibleFill;
+    height: 20% !important;
+    width: 20%;
+    border: 3px solid wheat;
+    border-radius: 8px;
+    margin-left: 7px;
+    
+    transition-duration: 0.2s;
+}
+.uploaded-img:hover {
+    width: 21%;
+    height: 21%;
+    margin-left: 1%;
+    transition-duration: 0.2s;
+}
+.uploaded-video {
+    pointer-events: visibleFill;
+    height: 20% !important;
+    width: 20%;
+    transition-duration: 0.2s;
+}
+.uploaded-video:hover {
+    width: 21%;
+    height: 21%;
+    margin-left: 1%;
+    transition-duration: 0.2s;
+}
+
+
+
+
+.file-uploader-mask {
+    position: absolute;
+    border-radius: 5px;
+    width: 100% !important;
+    height: 100% !important;
+    border: 2px dashed #ccc;
+    
+}
+
+
+
+.file-uploader-icon {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+
+.dropzone-uploader-mask {
+    width: 90%;
+    position: absolute;
+    border-radius: 5px;
+    height: 210px !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px dashed #ccc;
+    transition-duration: 0.4s;
+}
+.dropzone-uploader-mask:hover {
+    border-radius: 20px;
+    height: 220px !important;
+    width: 95%;
+    margin-left: -1%;
+    margin-top: 1%;
+    border: 5px dashed #ccc;
+    box-shadow: 1px 1px 108px 3px rgb(245, 228, 197);
+    transition-duration: 0.4s;
+}
+
+
+.dropzone-input {
+    width: 89% !important;
+    height: 200px !important;
+    background-color: aqua;
+    opacity: 0;
+    position: relative;
+    /* pointer-events: none; */
+}
+/* .dropzone-input:hover {
+    opacity: 1;
+    background-color: wheat;
+    transition-duration: 0.4s;
+} */
+
+
+.img-review{        /* cái wrap lớn wrap mấy tấm hình lại trên cái input */
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    margin-top: -26vh;
+    /* background-color: #ccc; */
+    pointer-events: none;
+}
+
+
+.is_hide{
+    pointer-events: none;
+    z-index: 0;
+    transition-duration: 0.4s;
+}
+
+.dropzone-loading{
+    margin-top: 5px;
+}
+
+.text-center{
+    color: wheat;
+    margin-top: 15px;
+
+}
+
+
+/*progress bar*/
+.progressbar-container {
+    position: relative;
+    margin-top: 15px;
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.progressbar-complete {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    height: 100%;
+    background-color: #5225bd;
+    border-radius: 10px;
+    animation: g 2500ms infinite ease-in-out;
+    z-index: 2;
+}
+
+.progressbar-liquid {
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    animation: g 2500ms infinite ease-in-out,
+      r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    background-color: #5225bd;
+    border-radius: 40%;
+  }
+
+  @keyframes g {
+    0% {
+      background-color: #5225bd;
+    }
+    50% {
+      background-color: #607e9e;
+    }
+    100% {
+      background-color: #5225bd;
+    }
+  }
+  
+  @keyframes r {
+    from {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+  }

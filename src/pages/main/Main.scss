@@ -1,0 +1,45 @@
+@keyframes card-remove{
+  0%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+.removed-card{
+  // animation-duration: 0.7s;
+  // animation-name: card-remove;
+  
+  transform: scale(0);
+  transition: all 1s ease-out;
+}
+
+.wrap-allcard-with-animation-when-change{   //(chưa hoạt động)
+  align-items: center;
+  display: block;
+  transition: all 1s;
+}
+
+
+.btn-icon{
+  width: 30px;
+  height: 30px;
+}
+
+
+.outerChat-container {    
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 42vh;
+  margin-left: 145vh;
+  background-color: none;
+}

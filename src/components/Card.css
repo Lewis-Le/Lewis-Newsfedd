@@ -1,0 +1,313 @@
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes card2-appeard{
+  0%{
+    margin-left: -3%;
+    width: 0%;
+    height: 0%;
+  }
+  40%{
+    width: 110%;
+    height: fit-content;
+  }
+  100%{
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+@keyframes card1-appeard{
+  0%{
+    width: 30%;
+    height: 0%;
+  }
+  40%{
+    width: 110%;
+    height: fit-content;
+  }
+  100%{
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+@keyframes card3-appeard{
+  0%{
+    width: 40%;
+    height: 0%;
+  }
+  40%{
+    width: 110%;
+    height: fit-content;
+  }
+  100%{
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+p {
+  font-size: medium;
+  z-index: -1;
+  color: aliceblue;
+  margin-left: 2%;
+}
+
+h4 {
+  font-size: 18px;
+  color: aliceblue;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-status-content{
+  pointer-events: none;
+  width: 100%;
+  background-color: #222831;
+  color: white;
+  font-size: 16px;
+  padding-left: 14px;
+  /* resize:none; */
+  overflow: hidden;
+}
+
+
+
+.card-date{
+  color: white;
+  font-size: 7px;
+  margin-left: -34px;
+  list-style: none;
+}
+.card-username{
+  color: white;
+  font-size: 12px;
+  margin-left: -34px;
+  list-style: none;
+}
+
+.card-btn-see-more{
+  background-color: #757575;
+  border-radius: 50px;
+  color: white;
+  margin-left: 12px;
+  padding-top: 3px;
+  padding-right: 9px;
+  padding-bottom: 3px;
+  padding-left: 9px;
+  border: none;
+}
+
+.blur {
+  backdrop-filter: blur(12px);
+}
+
+
+.round-avatar-card {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 16px;
+  margin-top: -25px;
+}
+
+.card-wrap {
+  border-radius: 12px;
+  /* background-color: #222831; */
+  backdrop-filter: blur(20px);
+  box-shadow: 1px 1px 18px 3px #000000;
+  width: 100%;
+  padding-bottom: 10px;
+  z-index: 0;
+  pointer-events: visibleFill;
+  animation-name: card3-appeard;
+  animation-duration: 1.4s;
+  transition-duration: 0.5s;               /* card-wrap thì có event khi hover hoặc click, còn card-1, card-3 thì pointer-events: none để card2 ko bị div card3 với card1 overlap lên, */
+}
+
+.card1-wrap {
+  border-radius: 12px;
+  /* background-color: #222831; */
+  backdrop-filter: blur(20px);
+  box-shadow: 1px 1px 18px 3px #000000;
+  width: 100%;
+  padding-bottom: 10px;
+  z-index: 0;
+  pointer-events: visibleFill;
+  animation-name: card1-appeard;
+  animation-duration: 1.4s;
+  transition-duration: 0.5s;               /* card-wrap thì có event khi hover hoặc click, còn card-1, card-3 thì pointer-events: none để card2 ko bị div card3 với card1 overlap lên, */
+}
+
+.card2-wrap {   /* là phần body của card 2 */
+  border-radius: 12px;
+  background-color: #222831;
+  /* opacity: 0.95; */
+  /* backdrop-filter: blur(12px); */
+  box-shadow: 1px 1px 21px 8px #000000;
+  width: 100%;
+  padding-bottom: 5px;
+  margin-top: 3%;
+  transition-duration: 0.3s;
+  pointer-events: visibleFill;
+  animation-name: card2-appeard;
+  animation-duration: 1.5s;
+}
+
+.card2-wrap-review {
+  border-radius: 12px;
+  background-color: #222831;
+  /* opacity: 0.95; */
+  /* backdrop-filter: blur(12px); */
+  box-shadow: 1px 1px 18px 3px #000000;
+  width: 380px;
+  height: fit-content;
+  margin-left: 14%;
+  padding-bottom: 10px;
+  pointer-events : none;
+  transition-duration: 0.3s;
+
+}
+
+/* .card2-wrap:not(:hover) {
+  width: 40%;
+  border-radius: 20px;
+  transition-duration: 0.5s;
+}
+div.card2-wrap:hover {
+  box-shadow: 1px 1px 55px 12px lightgray;
+  width: 45%;
+  margin-left: -2%;
+  transition-duration: 0.1s;
+} */
+
+
+.card-1 {
+  width: 20%;
+  margin-left: 34vh;
+  z-index: 0;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.card-2 {   /* phần wrap ngoài của body card 2 */
+  width: 38%;
+  z-index: 1;
+  margin: auto;
+  pointer-events: none;
+}
+
+.card-3 {
+  width: 30%;
+  z-index: 0;
+  margin-left: 120vh;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+
+
+.card-display{
+  width: 100%;
+  height: 100%;
+}
+.card-not-display{
+  display: none;
+}
+
+
+
+.card-btn-edit{
+  border-radius: 55px;
+  background-color: #ffffff;
+  font-size: 12px;
+  margin-top: 4px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  border-style: none;
+  /* box-shadow: 1px 1px 18px 7px #757575; */
+  transition-duration: 0.2s;
+}
+.card-btn-edit:hover{
+  border-radius: 20px;
+  border-style: none;
+  background-color: #cfdce2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 30px 3px #bebaba;
+  transition-duration: 0.2s;
+}
+
+
+.card-btn-delete{
+  border-radius: 35px;
+  background-color: #eb6964;
+  font-size: 12px;
+  margin-left: 4px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  border-style: none;
+  /* box-shadow: 1px 1px 18px 7px #757575; */
+  transition-duration: 0.2s;
+}
+.card-btn-delete:hover{
+  border-radius: 20px;
+  border-style: none;
+  background-color: #f57c7c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 30px 3px #bebaba;
+  transition-duration: 0.2s;
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  .card-1{
+    display: none;
+    pointer-events: none;
+  }
+  .card-3{
+    display: none;
+    pointer-events: none;
+  }
+  .card-2 {
+    margin-top: 1px;
+    width: 100%;
+    margin-left: 0%;
+    padding-left: 9px;
+    pointer-events: none;
+  }
+  .card2-wrap {
+    border-radius: 0px;
+    width: 98%;
+    margin-left: 1%;
+    padding-bottom: 10px;
+    box-shadow: none;
+    transition-duration: 0.3s;
+    pointer-events: visibleFill;
+  }
+}
+
+
+
+/* @media (min-height: 750px) and (max-height: 1200px){
+  .card2-wrap-review{
+    zoom: 93%;
+  }
+} */
